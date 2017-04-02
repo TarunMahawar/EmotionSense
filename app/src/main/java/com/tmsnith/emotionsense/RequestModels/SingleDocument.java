@@ -1,16 +1,17 @@
 package com.tmsnith.emotionsense.RequestModels;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by tms on 2/4/17.
  */
 
 public class SingleDocument {
 
+    @SerializedName("id")
     String id;
+    @SerializedName("text")
     String text;
-
-    public SingleDocument() {
-    }
 
     public SingleDocument(String id, String text)
     {

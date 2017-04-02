@@ -1,5 +1,7 @@
 package com.tmsnith.emotionsense.RequestModels;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 /**
@@ -7,19 +9,19 @@ import java.util.ArrayList;
  */
 
 public class DocumentModel {
-
-  public ArrayList<SingleDocument> document;
+  @SerializedName("documents")
+  public ArrayList<SingleDocument> documents;
 
     public DocumentModel() {
-      document=new ArrayList<>();
+      documents = new ArrayList<>();
     }
 
   public ArrayList<SingleDocument> getDocument() {
-    return document;
+    return documents;
   }
 
-  public void setDocument(ArrayList<SingleDocument> document) {
-    this.document = document;
+  public void setDocument(ArrayList<SingleDocument> documents) {
+    this.documents = documents;
   }
 }
 

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.tmsnith.emotionsense.R;
 import com.tmsnith.emotionsense.RequestModels.DocumentModel;
 import com.tmsnith.emotionsense.RequestModels.SingleDocument;
@@ -108,7 +109,7 @@ public class textFragment extends Fragment {
 //                    list=model.getRestaurants();
 //                    adapter.refresh(list);
 
-                    Toast.makeText(getActivity(),"Success\n"+model,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Success\n"+new Gson().toJson(response),Toast.LENGTH_LONG).show();
                     Log.v("hack","Success\n"+model);
 
                 }else{
