@@ -52,7 +52,7 @@ public class textFragment extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_text, container, false);
         text = (EditText) v.findViewById(R.id.text);
         submit = (Button) v.findViewById(R.id.submit1);
-        Log.v("successful1", "sucessful1");
+        Log.v("hack", "sucessful1");
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +85,6 @@ public class textFragment extends Fragment {
         request.setDocument(list);
 
 
-
         Toast.makeText(getActivity(), "" , Toast.LENGTH_SHORT).show();
 //        Call<DocumentModel> t =
         Call<TextResponse> call=apiservice.sendText(API, Content_type, request );
@@ -100,7 +99,7 @@ public class textFragment extends Fragment {
 
                 TextResponse model=response.body();
                 int status=response.code();
-                Log.v("Model",model +"");
+                Log.v("hack",model +"");
                 Toast.makeText(getActivity(),""+model,Toast.LENGTH_SHORT).show();
 
                 if(model!=null && response.isSuccess()){
@@ -110,9 +109,11 @@ public class textFragment extends Fragment {
 //                    adapter.refresh(list);
 
                     Toast.makeText(getActivity(),"Success\n"+model,Toast.LENGTH_SHORT).show();
+                    Log.v("hack","Success\n"+model);
 
                 }else{
                     Toast.makeText(getActivity(),"Some error occurred!!1",Toast.LENGTH_SHORT).show();
+                    Log.v("hack","Some error occurred!!1");
                 }
             }
 
@@ -120,6 +121,7 @@ public class textFragment extends Fragment {
             public void onFailure(Call<TextResponse> call, Throwable t) {
 //                bar.setVisibility(View.GONE);
                 Toast.makeText(getActivity(),"Some error occurred!!2",Toast.LENGTH_SHORT).show();
+                Log.v("hack","Some error occurred!!2");
             }
         });
 

@@ -53,9 +53,8 @@ public interface ApiInterface {
 //    Call<ProfileCircleResponse> getCircleList(@Path("id") String id);
 
     @POST("/text/analytics/v2.0/sentiment")
-    Call<TextResponse> sendText(
-             @Header("Ocp-Apim-Subscription-Key") String header
-            ,@Header("Content-Type") String type
+    Call<TextResponse> sendText(@Header("Ocp-Apim-Subscription-Key") String header,
+            @Header("Content-Type") String type
             ,@Body DocumentModel request
             );
  }

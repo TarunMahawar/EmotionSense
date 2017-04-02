@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.tmsnith.emotionsense.Fragments.imageFragment;
 import com.tmsnith.emotionsense.Fragments.textFragment;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.v("hack","hjk");
 
         tab=(TabLayout)findViewById(R.id.profile_tab);
         pager=(ViewPager)findViewById(R.id.profile_viewpager);
