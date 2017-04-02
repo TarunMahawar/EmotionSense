@@ -57,4 +57,6 @@ public interface ApiInterface {
             @Header("Content-Type") String type
             ,@Body DocumentModel request
             );
+//    @POST("emotion/v1.0/recognize")
+//    Call<Image>
  }
