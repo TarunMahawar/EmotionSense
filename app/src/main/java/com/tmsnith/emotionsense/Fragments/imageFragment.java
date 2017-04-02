@@ -18,8 +18,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 import com.tmsnith.emotionsense.R;
+import com.tmsnith.emotionsense.RequestModels.DocumentModel;
+import com.tmsnith.emotionsense.RequestModels.ImageUrlModel;
+import com.tmsnith.emotionsense.RequestModels.SingleDocument;
+import com.tmsnith.emotionsense.Resoponse.SingleFaceImageResponse;
+import com.tmsnith.emotionsense.Resoponse.TextResponse;
 import com.tmsnith.emotionsense.Service.UploadService;
+import com.tmsnith.emotionsense.Utils.ApiInterface;
+import com.tmsnith.emotionsense.Utils.Util;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static android.app.Activity.RESULT_OK;
 import static android.provider.ContactsContract.CommonDataKinds.Organization.TITLE;
@@ -30,6 +45,7 @@ import static android.support.v7.appcompat.R.id.add;
  * A simple {@link Fragment} subclass.
  */
 public class imageFragment extends Fragment {
+
 
     private Button upload_button;
     public imageFragment() {
@@ -73,8 +89,7 @@ public class imageFragment extends Fragment {
                             getActivity().startService(i);
 
                             Log.d(TAG," "+imageUrl);
-                            getActivity().finish();
-                Toast.makeText(getContext(),"clicked on upload buttom : "+ imageUrl ,Toast.LENGTH_LONG).show();
+
             }
         });
         return v;
@@ -117,5 +132,6 @@ public class imageFragment extends Fragment {
             Log.v("img url"," "+ imgDecodableString);
         }
     }
+
 
 }

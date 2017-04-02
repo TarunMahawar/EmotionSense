@@ -27,8 +27,8 @@ public class Util {
                 Request original = chain.request();
 
                 Request request = original.newBuilder()
-                        .addHeader("Content-Type", "application/json")
-                        .addHeader("Ocp-Apim-Subscription-Key", "b868ca80b2184f46a3ed464503ea4f2c")
+                      //  .addHeader("Content-Type", "application/json")
+                      //  .addHeader("Ocp-Apim-Subscription-Key", "b868ca80b2184f46a3ed464503ea4f2c")
                         .method(original.method(), original.body())
                         .build();
 

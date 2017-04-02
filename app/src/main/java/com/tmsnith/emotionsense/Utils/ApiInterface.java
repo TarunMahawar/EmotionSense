@@ -1,7 +1,11 @@
 package com.tmsnith.emotionsense.Utils;
 
 import com.tmsnith.emotionsense.RequestModels.DocumentModel;
+import com.tmsnith.emotionsense.RequestModels.ImageUrlModel;
+import com.tmsnith.emotionsense.Resoponse.SingleFaceImageResponse;
 import com.tmsnith.emotionsense.Resoponse.TextResponse;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -56,5 +60,10 @@ public interface ApiInterface {
     Call<TextResponse> sendText(@Header("Ocp-Apim-Subscription-Key") String header,
             @Header("Content-Type") String type
             ,@Body DocumentModel request
+            );
+    @POST("/emotion/v1.0/recognize")
+    Call<ArrayList<SingleFaceImageResponse>> sendImageUrl(@Header("Ocp-Apim-Subscription-Key") String header,
+                                 @Header("Content-Type") String type
+            , @Body ImageUrlModel request
             );
  }
