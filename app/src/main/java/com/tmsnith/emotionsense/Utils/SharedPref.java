@@ -3,9 +3,6 @@ package com.tmsnith.emotionsense.Utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by jaykay12 on 24/3/17.
- */
 
 public class SharedPref{
         private SharedPreferences sharedPreferences;
@@ -14,6 +11,8 @@ public class SharedPref{
         private static final String PREF_NAME="UserInfo";
         private static final String LOGIN_STATUS="loginstatus";
         private static final String USER_ID="apikey";
+        private static final String url="URL";
+        private static final String URL_TO_SEND = "UrlToSend";
 
         public SharedPref(Context context){
             sharedPreferences = context.getSharedPreferences(PREF_NAME,Context.MODE_PRIVATE);
@@ -36,5 +35,13 @@ public class SharedPref{
 
         public String getUserId(){
             return sharedPreferences.getString(USER_ID,"");
+        }
+
+        public void setUrlToSend(String UrlToSend){
+            editor.putString(URL_TO_SEND,UrlToSend);
+            editor.commit();
+        }
+        public String getUrlToSend() {
+            return sharedPreferences.getString(URL_TO_SEND,"");
         }
 }

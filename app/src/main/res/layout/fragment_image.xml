@@ -1,9 +1,15 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.tmsnith.emotionsense.Fragments.imageFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.tmsnith.emotionsense.Fragments.imageFragment">
+    android:orientation="vertical">
 
     <ImageView
         android:layout_marginTop="10dp"
@@ -21,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Upload Image"
+            android:text="SELECT IMAGE"
             android:layout_weight="0.5"/>
 
         <Button
@@ -29,14 +35,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Analyze Image"
+            android:text="ANALYIZE IMAGE"
             android:layout_marginLeft="2dp"
             android:layout_weight="0.5"/>
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -77,12 +80,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="Happiness"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
                     android:text="0 %"
                     android:id="@+id/happi"/>
             </LinearLayout>
@@ -90,7 +95,7 @@
                     <ProgressBar
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:progress="0"
                         android:id="@+id/HappiPercent"
                         />
@@ -116,6 +121,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Sadness"
                         />
 
@@ -128,7 +134,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:progress="0"
                     android:id="@+id/sadPercent"
                     />
@@ -154,6 +160,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Fear"
                         />
 
@@ -166,7 +173,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:id="@+id/fearPercent"
                     android:progress="0"
                     />
@@ -192,6 +199,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Anger"
                         />
 
@@ -204,7 +212,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:id="@+id/angerPercent"
                     android:progress="0"
                     />
@@ -231,6 +239,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Disgust"
                         />
 
@@ -243,7 +252,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:id="@+id/disgustPercent"
                     android:progress="0"
                     />
@@ -270,6 +279,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Neutral"
                         />
 
@@ -282,7 +292,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:id="@+id/neutralPercent"
                     android:progress="0"
                     />
@@ -309,6 +319,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Surprise"
                         />
 
@@ -321,7 +332,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:id="@+id/surprisePercent"
                     android:progress="0"
                     />
@@ -347,6 +358,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:text="Contemt"
                         />
 
@@ -362,7 +374,7 @@
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
                     android:id="@+id/contemptPercent"
                     android:progress="0"/>
 
@@ -374,6 +386,6 @@
 
     </android.support.v7.widget.CardView>
 
-    </ScrollView>
-
 </LinearLayout>
+</ScrollView>
+
