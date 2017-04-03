@@ -29,7 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Upload Image"
+            android:text="Analyze Image"
+            android:layout_marginLeft="2dp"
             android:layout_weight="0.5"/>
     </LinearLayout>
 
@@ -63,24 +64,26 @@
                 android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/happy"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="5dp"
+                    android:layout_height="wrap_content"
                     android:text="Happiness"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0 %"
                     android:id="@+id/happi"/>
             </LinearLayout>
 
@@ -88,7 +91,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                     android:id="@+id/HappiPercent"
+                        android:progress="0"
+                        android:id="@+id/HappiPercent"
                         />
             </LinearLayout>
 
@@ -99,18 +103,19 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:background="@drawable/sad"
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Sadness"
                         />
 
@@ -124,6 +129,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progress="0"
                     android:id="@+id/sadPercent"
                     />
             </LinearLayout>
@@ -135,18 +141,19 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:background="@drawable/fear"
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Fear"
                         />
 
@@ -161,6 +168,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/fearPercent"
+                    android:progress="0"
                     />
 
             </LinearLayout>
@@ -172,18 +180,18 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        />
+                        android:background="@drawable/anger"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Anger"
                         />
 
@@ -198,6 +206,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/angerPercent"
+                    android:progress="0"
                     />
 
             </LinearLayout>
@@ -209,18 +218,19 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:background="@drawable/disgust"
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Disgust"
                         />
 
@@ -235,6 +245,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/disgustPercent"
+                    android:progress="0"
                     />
 
             </LinearLayout>
@@ -247,7 +258,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -258,7 +269,7 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Neutral"
                         />
 
@@ -273,6 +284,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/neutralPercent"
+                    android:progress="0"
                     />
 
             </LinearLayout>
@@ -285,7 +297,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -296,7 +308,7 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Surprise"
                         />
 
@@ -311,6 +323,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/surprisePercent"
+                    android:progress="0"
                     />
 
             </LinearLayout>
@@ -322,7 +335,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -333,14 +346,17 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Contemt"
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/contempt"/>
+                        android:id="@+id/contempt"
+                        android:gravity="right"
+                        android:text="0 %"
+                        />
                 </LinearLayout>
 
                 <ProgressBar
@@ -348,7 +364,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/contemptPercent"
-                    />
+                    android:progress="0"/>
 
             </LinearLayout>
 
