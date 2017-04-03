@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -102,7 +103,7 @@ public class imageFragment extends Fragment {
         per_neutral = (TextView)v.findViewById(R.id.neutral);
         per_sadness = (TextView)v.findViewById(R.id.sad);
         per_surprise = (TextView)v.findViewById(R.id.surprise);
-
+        image_to_upload = (ImageView) v.findViewById(R.id.image_to_upload);
         select_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,21 +113,20 @@ public class imageFragment extends Fragment {
         upload_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                            Intent i=new Intent(getContext(), UploadService.class);
-                            i.putExtra(UPLOAD_SERVICE,true);
-                            if(!imageUrl.toString().equals(""))
-                                i.putExtra(URL_IMAGE,imageUrl.toString());
-                            getActivity().startService(i);
-                            sharedPref = new SharedPref(getContext());
-                            UrlToSend = sharedPref.getUrlToSend();
-                            Log.d("UrlTOSend"," "+UrlToSend);
-                            if(UrlToSend.equals(""))
-                            {
-                                return;
-                            }
-                            Toast.makeText(getContext(), "retrofit is calling ", Toast.LENGTH_SHORT).show();
-                            retrofit();
+                Intent i=new Intent(getContext(), UploadService.class);
+                i.putExtra(UPLOAD_SERVICE,true);
+                if(!imageUrl.toString().equals(""))
+                    i.putExtra(URL_IMAGE,imageUrl.toString());
+                getActivity().startService(i);
+                sharedPref = new SharedPref(getContext());
+                UrlToSend = sharedPref.getUrlToSend();
+                Log.d("UrlTOSend"," "+UrlToSend);
+                if(UrlToSend.equals(""))
+                {
+                    return;
+                }
+                //Toast.makeText(getContext(), "retrofit is calling ", Toast.LENGTH_SHORT).show();
+                retrofit();
 
 
             }
@@ -167,6 +167,7 @@ public class imageFragment extends Fragment {
             c.moveToFirst();
             String imgDecodableString = c.getString(c.getColumnIndex(filePathColumn[0]));
             c.close();
+            image_to_upload.setImageBitmap(BitmapFactory.decodeFile(imgDecodableString));
             imageUrl = imgDecodableString;
             Log.v("img url"," "+ imgDecodableString);
         }
