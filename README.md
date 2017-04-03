@@ -7,5 +7,5 @@ We build it using **Microsoft Cognitive services** and everything else is just a
 The Project is a tech hack developed for * __Hack 2.0__ *  by Team - **App Rangers**
 
 ## Team Members
-* Tarun Mahawar(@TarunMahawar)
-* Narendra Dodwaria(@narendra36)
+* Tarun Mahawar
+* Narendra Dodwaria
