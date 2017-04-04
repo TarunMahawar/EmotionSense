@@ -78,6 +78,8 @@ public class textFragment extends Fragment {
                     return;
                 }
 
+
+
                 View view = getActivity().getCurrentFocus();
                 if (view != null) {
                     InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
