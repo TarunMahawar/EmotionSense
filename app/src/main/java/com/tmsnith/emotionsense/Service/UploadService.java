@@ -16,7 +16,6 @@ import com.tmsnith.emotionsense.Utils.SharedPref;
 import java.util.Map;
 
 
-
 public class UploadService extends IntentService {
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
@@ -27,22 +26,23 @@ public class UploadService extends IntentService {
     private static final String TITLE = "title";
     private static final String DESCRIPTION = "description";
     private static final String URL_IMAGE = "imageUrl";
-    private static final String UPLOADING_START="start";
-    private static final  String UPLOADING_FINISH="finish";
-    private static final String UPLOADING_ERROR="error";
-    private static final String REGISTER_ROLL_NO="rollNoRegister";
-    private static  final String ROLL_NO="rollNo";
-    private static final  String WORK="work";
+    private static final String UPLOADING_START = "start";
+    private static final String UPLOADING_FINISH = "finish";
+    private static final String UPLOADING_ERROR = "error";
+    private static final String REGISTER_ROLL_NO = "rollNoRegister";
+    private static final String ROLL_NO = "rollNo";
+    private static final String WORK = "work";
     private String UrlToSend;
     private SharedPref sharedPref;
 
-    public UploadService(){
+    public UploadService() {
         super("UploadService");
     }
-        public UploadService(String name) {
-            super(name);
 
-        }
+    public UploadService(String name) {
+        super(name);
+
+    }
 
     @Override
     protected void onHandleIntent(Intent intent) {
@@ -55,9 +55,9 @@ public class UploadService extends IntentService {
                     Cloudinary cloudinary = new Cloudinary(Utils.cloudinaryUrlFromContext(getApplicationContext()));
                     try {
                         Intent i = new Intent(UPLOADING_START);
-                        i.putExtra(WORK,"Image");
+                        i.putExtra(WORK, "Image");
                         //sendBroadcast(i);
-                        Map map = cloudinary.uploader().upload(imageUrl.trim(),ObjectUtils.emptyMap());
+                        Map map = cloudinary.uploader().upload(imageUrl.trim(), ObjectUtils.emptyMap());
                         Log.d("image", (String) map.get("url"));
                         Toast.makeText(getApplicationContext(), "final url", Toast.LENGTH_SHORT).show();
                         UrlToSend = (String) map.get("url");
@@ -70,10 +70,9 @@ public class UploadService extends IntentService {
                         i.putExtra(WORK, "Image");
                         sendBroadcast(i);
                     }
-                }
-                else {
+                } else {
                     Intent i = new Intent(UPLOADING_START);
-                    i.putExtra(WORK,"Image");
+                    i.putExtra(WORK, "Image");
                     sendBroadcast(i);
                 }
 

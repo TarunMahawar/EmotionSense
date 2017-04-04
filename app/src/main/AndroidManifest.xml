@@ -13,13 +13,7 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <service
             android:name=".Service.UploadService"
@@ -36,6 +30,15 @@
         <meta-data
             android:name="CLOUDINARY_URL"
             android:value="cloudinary://299833331694641:f-W3OnHvVffqgz09O_k8zk2EyUc@hackathon-nith" />
+
+        <activity android:name=".Splash_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
