@@ -4,7 +4,7 @@ so we made an android app which can help us detect emotions either from written 
 
 We build it using **Microsoft Cognitive services** and everything else is just an abstraction.
 
-The Project is a tech hack developed for * __Hack 2.0__ *  by Team - **App Rangers**
+The Project is a tech hack developed for * __Hackathon 2.0__ *  by Team - **App Rangers**
 
 ## Team Members
 * Tarun Mahawar
