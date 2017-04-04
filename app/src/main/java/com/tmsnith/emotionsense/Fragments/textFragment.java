@@ -78,11 +78,11 @@ public class textFragment extends Fragment {
                     return;
                 }
 
-//                View view = getActivity().getCurrentFocus();
-//                if (view != null) {
-//                    InputMethodManager imm = (InputMethodManager)v1.getSystemService(getActivity().INPUT_METHOD_SERVICE);
-//                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-//                }
+                View view = getActivity().getCurrentFocus();
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
 
                 retrofit();
             }
