@@ -4,13 +4,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="about_us">Emotions are really an important part of our lives and have enough power to change it for better or bad. so we made an android app which can help us detect emotions either from written text or an image.
+    <string name="about_us">Emotions are really an important part of our lives and have enough power to change it for better or bad.
+        \nso we made an android app which can help us detect emotions either from written text or an image.
+        \nWe build it using <b>Microsoft Cognitive services</b> and everything else is just an abstraction.
+        <br>
+            <b>\n\nTeam Members</b></br>
+            \n Tarun Mahawar
+            \n Narendra Dodwaria
 
-We build it using <b>Microsoft Cognitive services</b> and everything else is just an abstraction.<br>
-            <b>Team Members</b>
-            Tarun Mahawar
-            Narendra Dodwaria
-        </br></string>
+        \n\nThis project is open source and you can see it at:\n \n<u>https://github.com/TarunMahawar/EmotionSense</u>
+        </string>
 
 
 </resources>
