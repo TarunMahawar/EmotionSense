@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">EmotionSense</string>
+    <string name="app_name">Emotional</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_us">Emotions are really an important part of our lives and have enough power to change it for better or bad. so we made an android app which can help us detect emotions either from written text or an image.
+
+We build it using <b>Microsoft Cognitive services</b> and everything else is just an abstraction.<br>
+            <b>Team Members</b>
+            Tarun Mahawar
+            Narendra Dodwaria
+        </br></string>
+
+
 </resources>
