@@ -15,3 +15,7 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 }
+
+/**
+ * Add more test here, for edge case detections
+**/
